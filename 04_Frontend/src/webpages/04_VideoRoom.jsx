@@ -551,9 +551,9 @@ function VideoRoom() {
 
                {/* Remote Videos */}
               { (joined == true) ?
-                <div className="remoteVideos flex flex-wrap gap-4">
+                <div className="remoteVideos flex flex-wrap justify-center gap-4">
                   {videos.map(user => (
-                      <video key={user.id} autoPlay className="w-60 h-46 border-4 border-purple-600 rounded-lg"
+                      <video key={user.id} autoPlay className="w-40 h-36 sm:w-48 sm:h-40 md:w-60 md:h-46 border-4 border-purple-600 rounded-lg"
                         ref={(video) => {if (video) video.srcObject = user.stream; }}
                       >
             
@@ -581,7 +581,7 @@ function VideoRoom() {
         {/* Meeting Consoles footer tab */}
         {
                   (joined == true) ?
-                  <div className="meetingConsoles flex flex-row justify-center items-center gap-20 bg-gray-700 min-w-full h-20 fixed bottom-0">
+                  <div className="meetingConsoles flex flex-row justify-center items-center gap-4 sm:gap-6 md:gap-8 bg-gray-700 w-full h-20 fixed bottom-0 p-2">
                       
                       {
                         (mic == true) ? <i onClick={toggleMic} className="fa-solid fa-microphone text-green-600 text-2xl"></i> : <i onClick={toggleMic} className="fa-solid fa-microphone-slash text-red-800 text-2xl"></i>
