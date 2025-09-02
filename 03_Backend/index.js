@@ -54,7 +54,7 @@ cors middleware tells the browser “yes, this frontend is allowed to talk to me
 
 // ** Use "CORS"
 app.use(cors({
-    origin: "http://localhost:5173",   // "*" means from all Frontend URL
+    origin: ["http://localhost:5173", "https://visionmeet-full-stack-project.netlify.app/"],   // "*" means from all Frontend URL
     methods: ["GET", "POST"],
     credentials: true  // if you send cookies/auth
 
