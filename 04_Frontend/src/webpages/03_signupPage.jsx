@@ -31,7 +31,7 @@ function SignUp_Page() {
         // Fetch the Backend Api "route" of signUp i.e. "01_new_user_register"
         try {
 
-            let response = await fetch("http://localhost:8080/user/register", {
+            let response = await fetch("https://visionmeet-full-stack-project.onrender.com/user/register", {   // Before Deployment, url was "http://localhost:8080/user/register"
                  method: "POST",
                  // body: formData       
                  // fetch requires body to be a string when sending JSON.

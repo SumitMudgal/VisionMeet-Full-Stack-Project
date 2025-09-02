@@ -12,7 +12,7 @@ import io from "socket.io-client";
 
 
 // Define the "Backend Server url"
-const server_url = "http://localhost:8080";
+const server_url = "https://visionmeet-full-stack-project.onrender.com";  // Before Deployemt the value was => "http://localhost:8080";
 
 const connections = {};  // We will push our connections here.
 

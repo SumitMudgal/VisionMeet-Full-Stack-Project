@@ -27,7 +27,16 @@ function Home() {
             try {
                 let token = localStorage.getItem("token");
 
+                /* // Changing the Url from Localhost to Render Backed Url.
                 let response = await fetch("http://localhost:8080/user/check-login", {
+                    method: "GET",
+                    headers: {
+                           "Authorization": localStorage.getItem("token")
+                    }
+                });
+                */
+
+                let response = await fetch("https://visionmeet-full-stack-project.onrender.com/user/check-login", {
                     method: "GET",
                     headers: {
                            "Authorization": localStorage.getItem("token")
