@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node.js dependencies
+node_modules/
+
+# Build outputs
+dist
+dist-ssr
+build/
+
+# Local env files
+.env
+*.local
+
+# Editor/OS files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore Backend specific
+03_Backend/node_modules
+03_Backend/.env
+
+# Ignore Frontend specific
+04_Frontend/node_modules
+04_Frontend/dist
+04_Frontend/.env
+
+# Ignore Notes Folder
+01_Topics_Explanations
+02_Working_Explanations
