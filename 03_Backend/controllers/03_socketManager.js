@@ -49,7 +49,7 @@ const connect_To_Socket = (server) => {
     // Create a Varaiable say "io", that will store the Socket.Io Instance.
     let io = new Server(server, {
         cors: {
-            origin: ["http://localhost:5173", "*"],
+            origin: ["https://visionmeet-full-stack-project.netlify.app","http://localhost:5173", "*"],
             methods: ["GET", "POST"]
         }
     });
