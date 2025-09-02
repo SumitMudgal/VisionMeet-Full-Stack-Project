@@ -543,7 +543,7 @@ function VideoRoom() {
 
                <br /><br />
 
-               <div className="videoPreview bg-gray-500 w-80 h-60 rounded-sm lg sm:w-60 sm:h-44 xs:w-48 xs:h-36">
+               <div className="videoPreview bg-gray-500 w-80 h-60 rounded-sm lg sm:w-60 sm:h-44 xs:w-48 xs:h-36 md:w-80 md:h-60">
                   <video ref={localVideoRef} autoPlay muted className="rounded-md border-4 border-sky-400 w-full h-full object-cover"></video>
                </div>
 
@@ -553,7 +553,7 @@ function VideoRoom() {
               { (joined == true) ?
                 <div className="remoteVideos flex flex-wrap justify-center gap-4">
                   {videos.map(user => (
-                      <video key={user.id} autoPlay className="w-40 h-36 sm:w-48 sm:h-40 md:w-60 md:h-46 border-4 border-purple-600 rounded-lg"
+                      <video key={user.id} autoPlay className="w-60 h-45 sm:w-60 sm:h-45 md:w-60 md:h-45 border-4 border-purple-600 rounded-lg"
                         ref={(video) => {if (video) video.srcObject = user.stream; }}
                       >
             
@@ -564,17 +564,22 @@ function VideoRoom() {
                  <span></span>
                }
 
-               <br /><br />
+               <br />
 
                {
-                  (joined == false) ? 
-                  <button onClick={onJoinMeeting} className="bg-amber-400 rounded-md h-8 w-30 font-medium hover:bg-amber-300">Join Meeting</button> :
-                  <button onClick={onLeaveMeeting} className="bg-amber-400 rounded-md h-8 w-30 font-medium hover:bg-amber-300">Leave Meeting</button>
+                  (joined == false) &&
+                  <button onClick={onJoinMeeting} className="bg-amber-400 rounded-md h-8 w-30 font-medium hover:bg-amber-300">Join Meeting</button> 
                }
 
-               <br /><br />
-
            </div>
+           <br />
+            <div className="flex flex-row items-center justify-center mb-2">
+               {
+                 (joined == true) &&
+                 <button onClick={onLeaveMeeting} className="bg-amber-400 rounded-md h-8 w-30 font-medium hover:bg-amber-300">Leave Meeting</button>
+               }
+            </div>
+            <br /><br /><br /><br /><br />
         </div>
 
         {/* ----------------------------------------------------------------------- */}
