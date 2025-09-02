@@ -61,7 +61,7 @@ function Navbar(props) {
     return(
         <div className="navbar flex flex-row h-11 gap-6 justify-end content-center">
             { (isLoggedIn == false) ?
-            <button className="text-amber-100 font-medium hover:text-amber-300 cursor-pointer">Join as Guest</button> :
+            <button onClick={onJoinAsGuest} className="text-amber-100 font-medium hover:text-amber-300 cursor-pointer">Join as Guest</button> :
             <button className="text-amber-100 font-medium hover:text-amber-300 cursor-pointer">Help</button>
             }
             <button className="text-amber-100 font-medium hover:text-amber-300 cursor-pointer">About</button>

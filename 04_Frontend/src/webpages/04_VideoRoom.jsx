@@ -200,7 +200,7 @@ function VideoRoom() {
 // "connecToSocketServer" function => 
    let connecToSocketServer = (username) => {
 
-      socketRef.current = io.connect(server_url, { secure: false });  // Apne Device ke "socket" ke "current" i.e. real time  me "Io" se connection banake Data daaldiya.
+      socketRef.current = io.connect(server_url, { transports: ["websocket"], withCredentials: true });  // Apne Device ke "socket" ke "current" i.e. real time  me "Io" se connection banake Data daaldiya.
       
       // On Connection EstablisedwE9JA 
       socketRef.current.on("connect", async () => {
@@ -543,8 +543,8 @@ function VideoRoom() {
 
                <br /><br />
 
-               <div className="videoPreview bg-gray-500 w-80 h-60 rounded-sm lg">
-                  <video ref={localVideoRef} autoPlay muted className="rounded-md border-4 border-sky-400"></video>
+               <div className="videoPreview bg-gray-500 w-80 h-60 rounded-sm lg sm:w-60 sm:h-44 xs:w-48 xs:h-36">
+                  <video ref={localVideoRef} autoPlay muted className="rounded-md border-4 border-sky-400 w-full h-full object-cover"></video>
                </div>
 
                <br /><br />
