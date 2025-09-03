@@ -32,7 +32,7 @@ function Navbar(props) {
             const token = localStorage.getItem("token");
             
             // Call the "logout" Api
-            await fetch("http://localhost:8080/user/logout", {
+            await fetch("https://visionmeet-full-stack-project.onrender.com/user/logout", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
